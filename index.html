@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>SingUp</title>
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+        <div class="signupProgress">
+            <h1>BookVerse</h1>
+            <div class="signupstep">
+                <div class="steps greentext"><img src="images/icons8-tick-green.png" alt="">SingUp</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">Username</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">Profile Picture</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">Select Interest</div>
+            </div>
+        </div>
+        <div class="signupForm">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="inputbox">
+                    <input type="text" name="firstname" placeholder=" " required>
+                    <div class="labelText">First Name</div>
+                </div>
+    
+                <div class="inputbox">
+                    <input type="text" name="lastname" placeholder=" " required>
+                    <div class="labelText">Last Name</div>
+                </div>
+
+                <div class="inputbox">
+                    <input type="tel" name="phone" placeholder=" " required>
+                    <div class="labelText">Phone Number</div>
+                </div>
+
+                <div class="inputbox">
+                    <input type="email" name="email" placeholder=" ">
+                    <div class="labelText">Email</div>
+                </div>
+
+                <div class="inputbox select-box">
+                    <select name="gender" required>
+                        <option value="" disabled selected></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="labelText">Gender</div>
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" id="passwordFld" name="password" placeholder=" " required>
+                    <div class="labelText">Password</div>
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" id="passwordConfirmFld" name="password" placeholder=" " required>
+                    <div class="labelText">Confirm Password</div>
+                </div>
+
+                <input type="submit" value="Next" class="submitBtn">
+            </form>
+        </div>
+
+        <div class="haveAccount">
+            <p>Already have an Account?</p>
+            <a href="#">LogIn</a>
+        </div>
+
+        <!-- <div class="messages">
+            <div class="message">the first name is required</div>
+        </div> -->
+    </div>
+    
+    
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
