@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Profile Image</title>
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+        <div class="signupProgress">
+            <h1>BookVerse</h1>
+            <div class="signupstep">
+                <div class="steps greentext"><img src="images/icons8-tick-green.png" alt="">SingUp</div>
+                <div class="steps greentext"><img src="images/icons8-tick-green.png" alt="">Username</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">Profile Picture</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">Select Interest</div>
+            </div>
+        </div>
+        <div class="signupForm">
+            <form action="" method="post" enctype="multipart/form-data">
+                
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" hidden>
+                <div class="img-area selectImage" data-img="">
+                    <i class='bx bxs-cloud-upload icon'></i>      
+                    <h3>Upload Profile Picture</h3>
+                    <p>Click to upload image</p>
+                </div>
+                <input type="submit" value="Next" class="submitBtn">
+            </form>
+        </div>
+
+        <!-- <div class="messages">
+            <div class="message">the first name is required</div>
+        </div> -->
+    </div>
+    
+    
+
+
+
+    <script>
+        const selectImage = document.querySelector('.selectImage');
+        const inputFile = document.querySelector('#imageUpload');
+        const imgArea = document.querySelector('.img-area');
+
+        selectImage.addEventListener('click', function () {
+            inputFile.click();
+        });
+
+        inputFile.addEventListener('change', function () {
+            const image = this.files[0]
+            const reader = new FileReader();
+            reader.onload = ()=> {
+                const allImg = imgArea.querySelectorAll('img');
+                allImg.forEach(item=> item.remove());
+                const imgUrl = reader.result;
+                const img = document.createElement('img');
+                img.src = imgUrl;
+                imgArea.appendChild(img);
+                imgArea.classList.add('active');
+                imgArea.dataset.img = image.name;
+            }
+            reader.readAsDataURL(image);
+        });
+    </script>
+</body>
+</html>

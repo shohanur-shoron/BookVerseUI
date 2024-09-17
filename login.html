@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>LogIn</title>
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+        <div class="signupProgress">
+            <h1>BookVerse</h1>
+        </div>
+        <div class="signupForm">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="inputbox">
+                    <input type="text" name="firstname" placeholder=" " required>
+                    <div class="labelText">Username or Phone</div>
+                </div>
+
+                <div class="inputbox">
+                    <img class="passwordShowOrHide" onclick="checkPassword(this)" data-show-src="images/icons8-show-password-24.png" data-hide-src="images/icons8-hide-password-24.png" src="images/icons8-show-password-24.png" alt="">
+                    <input type="password" id="passwordFld" name="password" placeholder=" " required>
+                    <div class="labelText">Password</div>
+                </div>
+
+                <input type="submit" value="LogIn" class="submitBtn">
+            </form>
+        </div>
+
+        <div class="haveAccount">
+            <p>Do not have an Account?</p>
+            <a href="#">SingUp</a>
+        </div>
+
+        <!-- <div class="messages">
+            <div class="message">the first name is required</div>
+        </div> -->
+    </div>
+    
+    
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>

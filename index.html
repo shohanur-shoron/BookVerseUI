@@ -14,11 +14,11 @@
 
 
 
-    <div class="container">
+    <div class="container" >
         <div class="signupProgress">
             <h1>BookVerse</h1>
             <div class="signupstep">
-                <div class="steps greentext"><img src="images/icons8-tick-green.png" alt="">SingUp</div>
+                <div class="steps"><img src="images/icons8-tick-black.png" alt="">SingUp</div>
                 <div class="steps"><img src="images/icons8-tick-black.png" alt="">Username</div>
                 <div class="steps"><img src="images/icons8-tick-black.png" alt="">Profile Picture</div>
                 <div class="steps"><img src="images/icons8-tick-black.png" alt="">Select Interest</div>
@@ -27,27 +27,27 @@
         <div class="signupForm">
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="inputbox">
-                    <input type="text" name="firstname" placeholder=" " required>
+                    <input type="text" name="firstname" placeholder=" " required autocomplete="given-name">
                     <div class="labelText">First Name</div>
                 </div>
-    
+            
                 <div class="inputbox">
-                    <input type="text" name="lastname" placeholder=" " required>
+                    <input type="text" name="lastname" placeholder=" " required autocomplete="family-name">
                     <div class="labelText">Last Name</div>
                 </div>
-
+            
                 <div class="inputbox">
-                    <input type="tel" name="phone" placeholder=" " required>
+                    <input type="tel" name="phone" placeholder=" " required autocomplete="tel">
                     <div class="labelText">Phone Number</div>
                 </div>
-
+            
                 <div class="inputbox">
-                    <input type="email" name="email" placeholder=" ">
+                    <input type="email" name="email" placeholder=" " autocomplete="email">
                     <div class="labelText">Email</div>
                 </div>
-
+            
                 <div class="inputbox select-box">
-                    <select name="gender" required>
+                    <select name="gender" required autocomplete="sex">
                         <option value="" disabled selected></option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -55,17 +55,19 @@
                     </select>
                     <div class="labelText">Gender</div>
                 </div>
-
+            
                 <div class="inputbox">
-                    <input type="password" id="passwordFld" name="password" placeholder=" " required>
+                    <img class="passwordShowOrHide" onclick="checkPassword(this)" data-show-src="images/icons8-show-password-24.png" data-hide-src="images/icons8-hide-password-24.png" src="images/icons8-show-password-24.png" alt="">
+                    <input type="password" id="passwordFld" name="password" placeholder=" " required autocomplete="new-password">
                     <div class="labelText">Password</div>
                 </div>
-
+            
                 <div class="inputbox">
-                    <input type="password" id="passwordConfirmFld" name="password" placeholder=" " required>
+                    <img class="passwordShowOrHide" onclick="checkPassword2(this)" data-show-src="images/icons8-show-password-24.png" data-hide-src="images/icons8-hide-password-24.png" src="images/icons8-show-password-24.png" alt="">
+                    <input type="password" id="passwordConfirmFld" name="password_confirm" placeholder=" " required autocomplete="new-password">
                     <div class="labelText">Confirm Password</div>
                 </div>
-
+            
                 <input type="submit" value="Next" class="submitBtn">
             </form>
         </div>
